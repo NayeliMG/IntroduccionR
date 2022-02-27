@@ -1,0 +1,60 @@
+---
+title: "RMarkdown Deber"
+author: "Nayeli Mamallacta"
+date: "26/2/2022"
+output:
+  html_document:
+    mathjax: http://example.com/MathJax.js
+    self_contained: yes
+    fig_height: 6
+    fig_width: 8
+    theme: journal
+    highlight: zenburn
+    toc: yes
+    toc_depth: 3
+    toc_float:
+      collapsed: no
+      smooth_scroll: yes
+  word_document:
+    toc: yes
+    toc_depth: '3'
+---
+
+# Contenido
+
+## EJERCICIO 1
+```{r}
+ciudad <- "Tena"
+paises_andes <- c("Venezuela", "Argentina", "Colombia", "Ecuador", "Perú", "Bolivia", "Chile")
+print(paises_andes)
+
+```
+
+## EJERCICIO 2
+```{r}
+poblacion_paises_america <- data.frame (identador = seq(1:12),
+                                        norte_sur = as.factor(c(rep(0,10),1,1)),
+                                        paises = c("Venezuela", "Bolivia", "Brasil", "Chile", "Colombia", "Ecuador", "Paraguay", "Perú", "Surinam", "Mexico", "USA", "Guyana"),
+                                        población = c(28.44, 11.67, 212.6, 19.46, 50.88, 17.94, 7.132, 32.97, 0.58, 128.9, 329.5, 186.55))# millones
+print(poblacion_paises_america)
+
+```  
+
+## EJERCICIO 3
+```{r, eval = FALSE}
+library(DNAseqtest)
+database <- DNase
+class(DNase)
+first_filter <- filter(DNase, conc < 0.2 & conc > 0.1)
+second_filter <- filter(DNase, Run != 2 & conc > 0.2 & density <= 1)
+print(database)
+
+```
+## EJERCICIO 4
+```{r, eval = FALSE}
+library(dplyr)
+conc <- filter(database, conc < 0.2 & conc > 0.1)
+print(conc)
+
+
+```                                        
